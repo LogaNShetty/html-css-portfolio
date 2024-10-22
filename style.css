@@ -1,0 +1,292 @@
+/*CSS reset*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+ 
+/*variables*/
+:root{
+    --navbar-height:59px;
+}
+
+/*navigation bar*/
+#navbar{
+    display: flex;
+    align-items: center;
+    position:sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+/*logo and Image*/
+#logo{
+    margin: 30px 40px;
+}
+
+#logo img{
+    height: 60px;
+    margin: 3px 5px;
+}
+
+
+#navbar ul{
+    display: flex;
+    font-family: "Quicksand", sans-serif;
+}
+
+
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul .right {
+    margin-left: auto;
+}
+
+#navbar ul li  a{
+    color: white;
+    display:block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;/*removes underline*/
+}
+
+#navbar .item a:hover{
+    color: blue;
+    background-color: white;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+li.webname{
+    font-family: "Quicksand", sans-serif;
+    color: #411bc9;
+    font-weight: bold;
+    font-size: 36px;
+    padding: 3px 22px;
+}
+
+
+
+/*home section */
+#home{
+    display: flex; /*aligns ccontents horizontally*/
+    flex-direction: column;
+    padding: 11px 165px;
+    height: 402px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#home::before{
+    content: "";
+    position: absolute;
+    background: url('./bg1.jpg') no-repeat center center/cover;
+    height: 100%;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.84;
+}
+
+#home h1{
+    color: rebeccapurple;
+    text-align: center;
+    font-family: "Bree Serif", serif;
+}
+
+#home p{
+    color: black;
+    text-align: center;
+    font-size: 1.7rem;
+    font-family: "Bree Serif", serif;
+}
+
+/*Services Section*/
+#services-container{
+    display: grid;
+    justify-content: center;
+}
+
+
+#services{
+    margin: 34px;
+    display: flex;
+}
+
+#services .box{
+    border: 2px solid brown;
+    padding: 34px;
+    margin: 3px 6px;
+    border-radius: 28px;
+    background: wheat;
+}
+
+#services .box img{
+    height: 160px;
+    margin: auto;
+    display: flex;
+    cursor: pointer;
+}
+
+
+/*client section*/
+#client-section{
+    margin-top: 30px;
+    height: 320px;
+    position: relative;
+}
+
+#client-section::before{
+    content: "";
+    position: absolute;
+    background: url('./bg2.jpg');
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.client-item{
+    padding: 35px;
+}
+
+#clients img{
+    height: 130px;
+}
+
+/*contact page*/
+#contact{
+    margin-top: 30px;
+    position: relative;
+}
+
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('./bg3.jpg') no-repeat center center/cover;
+}
+
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+
+#contact-box input,
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.4rem;
+    border: 2px solid black;
+}
+
+#contact-box form{
+    width: 40%;
+}
+
+#contact-box label{
+    font-size: 1.3rem;
+    font-family: "Bree Serif", seriff;
+}
+
+footer{
+    background: black;
+    color: yellowgreen;
+    padding: 9px 20px;
+}
+
+
+/*utility class*/
+.h-primary{
+    font-size: 2.8rem;
+    padding: 12px;
+    font-family: "Bree Serif", serif;
+}
+
+.h-secondary{
+    font-size: 1.8rem;
+    padding: 12px;
+    font-family: "Bree Serif", serif;
+}
+
+#orderButton{
+    padding: 6px 20px;
+    border: 2px solid black;
+    background-color: lightblue;
+    color:black;
+    margin: auto;
+    font-size: 1.5rem;
+    border-radius: 7px;
+    cursor: pointer;
+    display: block;
+    margin-top: 17px;
+    margin-bottom: 20px;
+}
+
+.submit_button{
+    padding: 6px 20px;
+    border: 2px solid black;
+    background-color: lightblue;
+    color:black;
+    margin: auto;
+    font-size: 1.5rem;
+    border-radius: 7px;
+    cursor: pointer;
+    display: block;
+    margin-top: 17px;
+}
+
+li.homelink a{
+    font-family: "Bree Serif", serif;
+    list-style: none;
+    font-size: 1.3rem;
+    color: black;
+    text-decoration: none;
+}
+
+li.homelink a:hover{
+    color: white;
+    background-color: black;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.center{
+    text-align: center;
+}

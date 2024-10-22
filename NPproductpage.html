@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAR NUMBER PLATE PURCHASE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Quicksand:wght@300..700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="propage.css">
+</head>
+<body>
+    <div class="container">
+        <div class="product">
+            <div class="gallery">
+                <img id="numberPlateImage" src="NPpurchaseimg .jpg" alt="Pure Black Gel Number Plate">
+                <!--<div class="controls">
+                    <span class="btn"></span>
+                </div>-->
+            </div>
+            <div class="details">
+                <h1>Car – Pure Black Gel Number Plate</h1><br>
+                <h2>Rs.2700</h2><br>
+                <p>The product contains 2 number plates, front and back.</p>
+                <p>You may customize your car brand name, font, logo, size of the plate.</p>
+                <form method="post" action="NPpurchase.php">
+                    <div class="type-select">
+                        <p>TYPE</p>
+                        <label for="taxi">
+                            <input type="radio" name="type" id="taxi">
+                            <span>TAXI</span>
+                        </label>
+                        
+                        <label for="own">
+                            <input type="radio" name="type" id="own">
+                            <span>OWN</span>
+                        </label>
+                    </div>
+                    <div>
+                        <div class="quantity-select">
+                            <p>QUANTITY</p>
+                            <input type="number" value="1">
+                        </div>
+                    </div>
+
+                    <button type="button" id="buyButton">BUY NOW</button>
+                    <button type="button" id="homeButton">HOME</button></a>
+                 
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+         document.getElementById('buyButton').addEventListener('click', function() {
+            var isLoggedIn = localStorage.getItem('isLoggedIn');
+            if (isLoggedIn === 'true') {
+                window.location.href = 'popup.html';
+            } else {
+                alert('Log in before purchase');
+            }
+        });
+
+        document.getElementById('homeButton').addEventListener('click', function() {
+            window.location.href = 'home.html';
+        });
+    </script>
+
+
+
+</body>
+</html>

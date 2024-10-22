@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OFFICE BOARD PURCHASE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Quicksand:wght@300..700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="propage.css">
+</head>
+<body>
+    <div class="container">
+        <div class="product">
+            <div class="gallery">
+                <img id="officeBoardImage" src="OBpurchaseimg.jpg" alt="Personalised office boards">
+            </div>
+            <div class="details">
+                <h1>Personalised Office Board Design for Enterprises</h1><br>
+                <h2>Rs.1200</h2><br>
+                <h3>15% OFF</h3>
+                <p>Customixe the design according to your needs as we reach out to you personally!</p>
+                <form>
+                    <div class="type-select">
+                        <p>TYPE</p>
+                        <label for="2D">
+                            <input type="radio" name="type" id="2D">
+                            <span>2D</span>
+                        </label>
+                        
+                        <label for="3D">
+                            <input type="radio" name="type" id="3D">
+                            <span>3D</span>
+                        </label>
+                    </div>
+                    <div>
+                        <div class="quantity-select">
+                            <p>QUANTITY</p>
+                            <input type="number" value="1">
+                        </div>
+                    </div>
+
+                    <button type="button" id="buyButton">BUY NOW</button>
+                    <button type="button" id="homeButton">HOME</button></a>
+                 
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+       document.getElementById('buyButton').addEventListener('click', function() {
+            var isLoggedIn = localStorage.getItem('isLoggedIn');
+            if (isLoggedIn === 'true') {
+                window.location.href = 'OBpopup.html';
+            } else {
+                alert('Log in before purchase');
+            }
+        });
+
+        document.getElementById('homeButton').addEventListener('click', function() {
+            window.location.href = 'home.html';
+        });
+    </script>
+</body>
+</html>

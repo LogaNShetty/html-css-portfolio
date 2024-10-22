@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Successful</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="popup">
+            <img src="tick.png">
+            <h2>Purchase Successful!</h2>
+            <p>Thank you for ordering.</p>
+            <button type="button" id="ok-button">OK</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById('ok-button').addEventListener('click', function() {
+            window.location.href = 'OBproductpage.html';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOGIN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto+Slab:wght@300&display=swap" rel="">
+    
+   <style>
+       #container{
+           width: 50%;
+           height:500px;
+           
+           font-family:sans-serif;
+       }
+       #inner{
+           width:300px;
+           height:425px;
+           margin:auto;
+           text-align:center;
+           font-family:Roboto,sans-serif;
+           border-radius: 20px;
+           padding-top: 20px;
+        margin-top: 90px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+       }
+       #logo {
+        width: 20%;
+        height: 15%;
+        margin: auto;
+        margin-top: 20px;
+      }
+      img {
+        object-fit: contain;
+        height: 100%;
+        width: 100%;
+      }
+       #head {
+        margin-top: 10px;
+      }
+      h3 {
+        margin-top: 30px;
+        color: #84c225;
+        display: block;
+      }
+       #email{
+           width:70%;
+           height:25px;
+           margin-top: 10px;
+           border: none;
+           border-bottom: 1px solid gray;
+           color:#333333;
+           outline:none; 
+           font-style: italic;
+       }
+       #password{
+           width:70%;
+           height:25px;
+           margin-top: 25px;
+           border: none;
+           border-bottom: 1px solid gray;
+           color:#333333;
+           outline:none; 
+           font-style: italic;
+       }
+       
+       #two{
+           margin-top: 50px;
+           text-align:center;
+           width:80%;
+           height:40px;
+           border-radius: 5px;
+           background-color:#84c225 ;
+           color:white;
+           border:none;
+           font-weight: light-bold;
+           font-size: 15px;
+           cursor: pointer;
+       }
+
+       #goHomePage{
+           text-align:center;
+           width:24%;
+           height:30px;
+           border-radius: 5px;
+           background-color:sandybrown ;
+           color:white;
+           border:none;
+           font-weight: light-bold;
+           font-size: 15px;
+           cursor: pointer;
+       }
+
+      p {
+        font-size:9px;
+        position: relative;
+        font-weight: lighter;
+        color: #333333;
+        font-family: sans-serif;
+        line-height: 15px;
+      }
+      a {
+        color: royalblue;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      span {
+        font-size: 16px;
+        margin-top: 50px;
+        color: gray;
+      }
+    #signupLink{
+        font-size: 14px;
+    }
+      @media only screen and (min-width:376px) and (max-width:768px){
+            #iiner{
+                grid-template-columns:repeat(2,1fr);
+            }
+        }
+        @media only screen and (min-width:0px) and (max-width:376px){
+            #inner{
+                width:100%;
+                grid-template-columns:repeat(1,1fr);
+
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <!-- <div id="container"> -->
+        <div id="inner">
+            <div id="logo">
+                <img src="logo.jpg" alt="ImagineInk">
+            </div>
+            <div id="head">
+                <h3>LOGIN</h3>
+            </div>
+            <form method="post" action="" id="form">
+                <input id="email" type="email" name="email" placeholder="EMAIL" />
+                <br>
+                <input id="password" type="password" name="password" placeholder="PASSWORD" />
+                <br>
+                <button id="two" type="submit">Continue</button>
+               <p id="signupLink">If do not have an account yet? <a href="signup.html">SignUp</a>  
+               </p>
+            </form>
+            <a href="home.html"><button id="goHomePage">HOME</button></a> 
+        </div>
+        
+    <!-- </div> -->
+  </body>
+</html>
+<script>
+  document.getElementById("form").addEventListener("submit", signIn);
+  var regUser = JSON.parse(localStorage.getItem("user")) || [];
+  function signIn(e) {
+    e.preventDefault();
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+
+    if (!email || !password) {
+      alert("Enter All of the details");
+    } else {
+      for (var i = 0; i < regUser.length; i++) {
+        if (regUser[i].email === email && regUser[i].password === password) {
+          alert("User Logged In");
+          localStorage.setItem("isLoggedIn", true);
+          window.location.href = "home.html";
+          return;
+        } else if (email == "hrishithadmin@gmail.com" && password == "adminlogan") {
+          alert("Admin Login Sucessfully");
+          //redirect admin page
+          window.location.href = "admin.html";
+          return;
+        }
+      }
+      alert("Wrong Credintial");
+    }
+  }
+</script>

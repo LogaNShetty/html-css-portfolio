@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Quality Stickers | ImagineInk.com</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="screen and (max-width: 1175px)" href="phone.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Quicksand:wght@300..700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="logo.jpg" alt="ImagineInk.com">
+        </div>
+        <ul>
+            <li class="webname">ImagineInk.com</li>
+            <li class="item"><a href="#home">HOME</a></li>
+            <li class="item"><a href="#services-container">SERVICES</a></li>
+            <li class="item"><a href="#client-section">OUR CLIENTS</a></li>
+            <li class="item"><a href="#contact">CONTACT US</a></li>
+            <li class="item right" id="loginItem"><a href="login.html">LOGIN</a></li>
+            <li class="item right" id="logoutItem" style="display: none;"><a href="logout.html">LOGOUT</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <h1 class="h-primary">Welcome to ImagineInk</h1>
+        <p>ImagineInk.com is an E-Commerce website that allows customers to select stylish, customizable templates focusing on Number plates, Office name boards and Flex making. The website offers a user-friendly platform where customers can easily browse through a diverse collection of pre-designed templates or create their own designs from scratch using interactive design tools. Whether you're looking to add a personal touch to your vehicle, tune up your office space, or promote your business with eye-catching flex designs, ImagineInk.com provides endless possibilities. </p> <br>
+        <!--alt z for word wrap-->
+    </section>
+<!--services-->
+    <section id="services-container">
+        <h1 class="h-primary center">OUR SERVICES</h1>
+        <div id="services">
+            <div class="box">
+                <a href="NPproductpage.html">
+                <img src="numberplate (Small).jpg" alt="NUMBER PLATES"></a>
+                <h2 class="h-secondary center">NUMBER PLATES</h2>
+                <p class="center">Custumizable Number plates and order the best suitable one!!</p>
+            </div>
+            <div class="box">
+                <a href="OBproductpage.html">
+                <img src="officeboard (Small).png" alt="OFFICE BOARDS"></a>
+                <h2 class="h-secondary center">OFFICE BOARDS</h2>
+                <p class="center">Find the best varieties of Office Boards that highlights your enterprise!.!</p>
+            </div>
+            <div class="box">
+                <a href="BNRproductpage.html">
+                <img src="banners (Small).jpg" alt="BANNERS"></a>
+                <h2 class="h-secondary center">BANNERS</h2>
+                <p class="center">Make the occassion more expressive using our customizable Banners... </p>
+            </div>
+        </div>
+    </section> 
+<!--clients-->
+    <section id="client-section">
+        <h1 class="h-primary center">OUR TOP CLIENTS</h1>
+            <div id="clients">
+                <div class="client-item">
+                    <img src="client1 (Small).png" alt="TATA MOTORS">
+                </div>
+                <div class="client-item">
+                    <img src="client2 (Small).png" alt="OLA">
+                </div>
+                <div class="client-item">
+                    <img src="client3 (Small).jpeg" alt="GOLD'S GYM">
+                </div>
+                <div class="client-item">
+                    <img src="client4 (Small).jpg" alt="NS DANCE STUDIO">
+                </div>
+                <div class="client-item">
+                    <img src="client5 (Small).jpeg" alt="NATURALS">
+                </div>
+            </div>
+    </section>
+    <!--contact-->
+    <section id="contact">
+        <h1 class="h-primary center">CONTACT US</h1>
+        <div id="contact-box">
+            <form method="post" action="contact.php">
+                <div class="form-group">
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name" required minlength="2">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email" placeholder="Enter your email" required >
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number: </label>
+                    <input type="text" name="phone" id="phone"  placeholder="Enter your phone number" required pattern="\d{10}">
+                </div>
+                <div class="form-group">
+                    <label for="address">Address: </label>
+                    <textarea name="address" id="address" rows="4" placeholder="Enter your address" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message: </label>
+                    <textarea name="message" name="message" id="message" rows="4" placeholder="Enter your message" required></textarea>
+                </div>
+                <div class="form-group">
+                     <button class="submit_button" type="submit">Submit</button>
+            </form>
+        </div>
+        </section>
+    
+    <footer>
+        <div class="center">
+            Copyright &copy; www.ImagineInk.com All rights reserved!
+        </div>
+
+    </footer>
+    <script>
+        // Check login status
+        var isLoggedIn = localStorage.getItem('isLoggedIn');
+
+        // If logged in, show the logout item
+        if (isLoggedIn === 'true') {
+            document.getElementById('logoutItem').style.display = 'block';
+            document.getElementById('loginItem').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
